@@ -11,7 +11,19 @@ html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: justify;
   margin: 0 auto;
-  box-sizing: inherit; /* Hereda el box-sizing del html */
+  box-sizing: border-box;
+
+}
+
+#main-container {
+  position: relative;
+  min-height: 100vh; /* Asegura que el contenedor principal ocupe al menos toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
 }
 
 body {
@@ -53,7 +65,7 @@ header {
   display: none;
 }
 
-.seccion-1 {
+.seccion-1{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -81,9 +93,14 @@ footer {
   background: rgba(5, 5, 5, 1); /* Color sólido */
   padding: 5px;
   width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  left: 0; /* Alineado a la izquierda */
+  position: relative; /* Posición relativa */
+  left: 50%; /* Mueve el footer al centro de la pantalla */
+  transform: translateX(-50%); /* Ajusta la posición para centrarlo */
   height: auto;
   line-height: 2em;
+  align-items: center;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  margin-top: 2em; /* Ajusta este valor según el espacio que desees */
 }
 
 .footer-content {
@@ -100,6 +117,8 @@ footer {
   text-align: left; /* O el alineamiento que prefieras */
 }
 
+button {color: #111;}
+
 ol,
 ul {
   list-style: none;
@@ -111,6 +130,25 @@ a {
 iframe,
 img {
   border-radius: 20px;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  justify-content: center;
+  gap: 20px;
+}
+
+.video {
+  flex: 1 1 300px; /* Ajusta el tamaño mínimo de los videos */
+  max-width: 100%;
+  text-align: center;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Mantiene la proporción del video */
 }
 
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
@@ -133,6 +171,7 @@ h2 {
   text-align: center;
   font-size: xx-large;
   line-height: 3em;
+  margin-top: 2em;
 }
 
 header h1 {
@@ -256,7 +295,7 @@ img {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #242424;
+    background: rgba(36, 36, 36, 0.9);
     text-align: center;
     top: 120px;
     left: 100%;
@@ -278,9 +317,6 @@ img {
     font-size: 20px;
   }
 
-  #check:checked ~ .checkbtn {
-    color: #242424;
-  }
 
   header nav ul li {
     width: 100%;
@@ -290,7 +326,8 @@ img {
     text-align: center; /* Centra el texto dentro de cada li */
     border-radius: 20px;
     margin-top: 30px;
-  }
+    background-color: #111;
+      }
 
   nav ul {
     display: none;

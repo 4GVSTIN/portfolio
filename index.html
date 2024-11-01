@@ -14,7 +14,7 @@
     
   </head>
   <body>
-    <div class="full">
+    <div class="main-container">
     <div>
       <header>
         <div class="header-content">
@@ -28,7 +28,7 @@
                 <li class="menu-item"><a href="index.html">INICIO</a></li>
                 <li class="menu-item"><a href="">¿QUIENES SOMOS?</a></li>
                 <li class="menu-item"><a href="">¿QUÉ OFRECEMOS?</a></li>
-                <li class="menu-item"><a href="">ÚLTIMAS PRODUCCIONES</a></li>
+                <li class="menu-item"><a href="">PRODUCCIONES</a></li>
                 <li class="menu-item"><a href="formulario/formulario.html">CONTACTO</a></li>
             </ul>
         </nav>
@@ -62,11 +62,9 @@
 
         <section class="seccion-2">
           <h2>Últimas producciones</h2>
-          <div style="display: flex; justify-content: center; gap: 20px;">
-            <div style="text-align: center;">
+          <div class="video-container">
+            <div class="video">
               <iframe
-                width="560"
-                height="315"
                 src="https://www.youtube.com/embed/do5Fvavk22A?si=uI4gxZxRs_jzNOZ9"
                 title="YouTube video player"
                 frameborder="0"
@@ -75,12 +73,9 @@
                 allowfullscreen
               ></iframe>
             </div>
-
-            <div style="text-align: center;">
+            <div class="video">
               <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/Ns97tlUj6DY?si=Cb9WGS90judtxD1y"
+                src="https://www.youtube.com/embed/Ehplabw0wrU?si=NaLsEQkbb-F4gET2"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -88,18 +83,17 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <section>
-              
-            </section>
           </div>
-          <button id="btn-generar">Generar Frase</button>
-          <div id="frase"></div>
+        </section>
+          </div>
            <footer>
             <div class="footer-content">
             <ul>
               <li><strong>Contacto</strong></li>
               <li>Email</li>
               <li>Whatsapp</li>
+              <button id="btn-generar">Generar Frase</button>
+              <div id="frase"></div>
             </ul>
           </div>
           </footer>
