@@ -15,6 +15,8 @@ html {
 
 }
 
+main {  margin-top: 2em; /* Ajusta este valor según el espacio que desees */}
+
 #main-container {
   position: relative;
   min-height: 100vh; /* Asegura que el contenedor principal ocupe al menos toda la altura de la ventana */
